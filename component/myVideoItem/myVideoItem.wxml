@@ -1,0 +1,50 @@
+<!--component/myVideoItem/myVideoItem.wxml-->
+<view class="my-video-container">
+    <!--非当前视频显示封面-->
+    <block wx:if="{{currentId != video.id}}">
+        <block wx:if="{{loaded}}">
+            <image class="cover" mode="widthFix" src="{{video.cover_url}}" bindtap="startPlayer" data-id="{{video.id}}"></image>
+        </block>
+        <block wx:else>
+            <image class="cover" mode="widthFix" src="/images/video_cover_720_480.png" bindtap="startPlayer" data-id="{{video.id}}"></image>
+        </block>
+    </block>
+    <!--当前视频显示播放器-->
+    <block wx:else>
+        <video autoplay poster="{{video.cover_url}}" src="{{video.url}}" class="video" id="video_{{video.id}}"></video>
+    </block>
+    <text class="my-video-title">{{video.title}}</text>
+    <block wx:if="{{video.status == 1}}">
+        <view class="bottom-container">
+            <image class='played-number-icon' src='/images/th_eye.png'></image>
+            <text class="played-number">{{video.formatted_played_number}}</text>
+            <text class="duration">{{video.formatted_duration}}</text>
+        </view>
+    </block>
+</view>
+<view class="bottom-message-container">
+    <block wx:if="{{video.status == 1}}">
+        <!--点击该区域进入详情-->
+        <view class="seat" catchtap="goVideoDetail"></view>
+        <!--收藏数-->
+        <view class="message-container">
+            <image class="icon" src="/images/liked.png"></image>
+            <text class="number">{{video.formatted_liked_number}}</text>
+        </view>
+        <!--分享给好友-->
+        <button class="message-container" open-type="share" plain hover-class="none" hover-stop-propagation
+                data-id="{{video.id}}" data-title="{{video.title}}" data-cover="{{video.cover_url}}">
+            <image class="icon" src="/images/icon48_wx_logo.png"></image>
+            <text class="number">{{video.formatted_shared_wechat_number}}</text>
+        </button>
+        <!--分享到朋友圈-->
+        <button class="message-container" catchtap="saveVideoToAlbum" plain hover-class="none" hover-stop-propagation
+                data-id="{{video.id}}">
+            <image class="icon" src="/images/icon_res_download_moments.png"></image>
+            <text class="number">{{video.formatted_shared_moment_number}}</text>
+        </button>
+    </block>
+    <block wx:else>
+        <view class="readying">视频正在审核中</view>
+    </block>
+</view>

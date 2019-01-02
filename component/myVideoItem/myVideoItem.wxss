@@ -1,0 +1,120 @@
+/* component/myVideoItem/myVideoItem.wxss */
+.my-video-container {
+    position: relative;
+    width: 100%;
+}
+
+.my-video-container .video {
+    width: 100%;
+}
+
+.my-video-container .cover {
+    width: 100%;
+}
+
+.my-video-container .my-video-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 32rpx;
+    color: #FFF;
+    font-size: 32rpx;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.my-video-container .my-video-detail-container {
+    position: absolute;
+    right: 16rpx;
+    bottom: 32rpx;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottom-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 8rpx;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.bottom-container .played-number {
+    font-size: 20rpx;
+    line-height: 1;
+    color: #FFF;
+}
+
+.bottom-container .duration {
+    font-size: 20rpx;
+    line-height: 1;
+    color: #FFF;
+}
+
+.bottom-container .played-number-icon {
+    width: 33rpx;
+    height: 29rpx;
+    float: left;
+    margin-top: 8rpx;
+    margin-right: 8rpx;
+}
+
+.bottom-message-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 16rpx 32rpx;
+}
+
+.bottom-message-container .follow-btn {
+    padding: 24rpx 12rpx;
+    line-height: 0;
+    font-size: 24rpx;
+    color: #FFF;
+    background: #00AA00;
+    border-radius: 4rpx;
+}
+
+.bottom-message-container .user-name {
+    color: #AAA;
+    font-size: 24rpx;
+    line-height: 1;
+}
+
+.bottom-message-container .seat {
+    flex: 1;
+    height: 60rpx;
+}
+
+.bottom-message-container .message-container {
+    padding: 0 16rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+.bottom-message-container .message-container .icon {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.bottom-message-container .message-container .number {
+    margin-top: 16rpx;
+    color: #CCC;
+    font-size: 16rpx;
+    line-height: 1;
+}
+
+.readying {
+    height: 36rpx;
+    color: #AAA;
+    font-size: 24rpx;
+}

@@ -1,0 +1,123 @@
+/* component/videoItem/videoItem.wxss */
+.video-item-container .video-container{
+  position: relative;
+  width: 100%;
+}
+
+.video-item-container .video-container .video{
+  width: 100%;
+}
+
+.video-item-container .video-container .video-image{
+  width: 100%;
+}
+
+.video-item-container .video-container .video-title{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 32rpx;
+  color: #FFF;
+  font-size: 32rpx;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.video-item-container .video-container .author-header{
+  position: absolute;
+  left: 32rpx;
+  bottom: -16rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background: #FFF;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-item-container .video-container .author-header .header{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.video-item-container .video-container .user-name{
+  position: absolute;
+  left: 144rpx;
+  bottom: 24rpx;
+  color: #FFF;
+  font-size: 24rpx;
+  line-height: 1;
+}
+
+.video-item-container .video-container .video-detail-container{
+  position: absolute;
+  right: 16rpx;
+  bottom: 32rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.video-item-container .video-container .video-detail-container .total-looked-number,
+.video-item-container .video-container .video-detail-container .total-time{
+  color: #FFF;
+  background: rgba(0,0,0,0.3);
+  line-height: 0;
+  padding: 24rpx;
+  margin: 0 8rpx;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+}
+
+.video-item-container .bottom-message-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16rpx 32rpx;
+}
+
+.video-item-container .bottom-message-container .follow-btn{
+  padding: 24rpx 12rpx;
+  line-height: 0;
+  font-size: 24rpx;
+  color: #FFF;
+  background: #00AA00;
+  border-radius: 4rpx;
+}
+
+.video-item-container .bottom-message-container .user-name{
+  color: #AAA;
+  font-size: 24rpx;
+  line-height: 1;
+}
+
+.video-item-container .bottom-message-container .seat{
+  flex: 1;
+  height: 60rpx;
+}
+
+.video-item-container .bottom-message-container .message-container{
+  padding: 0 16rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+.video-item-container .bottom-message-container .message-container .icon{
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.video-item-container .bottom-message-container .message-container .number{
+  margin-top: 16rpx;
+  color: #CCC;
+  font-size: 16rpx;
+  line-height: 1;
+}

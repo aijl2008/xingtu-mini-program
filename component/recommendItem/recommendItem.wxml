@@ -1,0 +1,29 @@
+<!--component/recommendItem/recommendItem.wxml-->
+<view class="recommend-item-contaienr">
+    <view class="user-container">
+        <image class="header" src="{{recommend.avatar||'/images/user-64.png'}}" data-id="{{recommend.id}}" bindtap="goMemberDetail"></image>
+        <view class="detail-container">
+            <text class="nick-name" data-id="{{recommend.id}}" bindtap="c">{{recommend.nickname}}</text>
+            <text class="msg">视频数{{recommend.formatted_uploaded_number}} · 粉丝{{recommend.formatted_be_followed_number}}</text>
+        </view>
+
+        <block wx:if="{{!recommend.followed}}">
+            <view class="follow-btn" bindtap="followUser">+关注</view>
+        </block>
+    </view>
+
+    <block wx:if="{{recommend.video.length}}">
+        <view class="video-list-container">
+            <block wx:for="{{[0,1,2]}}" :key="*this">
+                <block wx:if="{{recommend.video[item]}}">
+                    <image class="video-item" src="{{recommend.video[item].cover_url||'/images/video_cover_720_480.png'}}"
+                           bindtap="jumpVideoDetail" data-id="{{recommend.video[item].id}}"></image>
+                </block>
+                <block wx:else>
+                    <image class="video-item" src="/images/video_cover_720_480.png"></image>
+                </block>
+
+            </block>
+        </view>
+    </block>
+</view>

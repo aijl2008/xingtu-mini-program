@@ -1,0 +1,4 @@
+<!--component/noMore/noMore.wxml-->
+<view class="container">
+  <text class="no-more-msg">没有更多了</text>
+</view>

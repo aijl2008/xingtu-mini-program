@@ -1,0 +1,60 @@
+/* component/memberItem/memberItem.wxss */
+.member-item-container {
+    width: 327rpx;
+    margin-bottom: 48rpx;
+    padding-bottom: 24rpx;
+    border: 1rpx solid #CCC;
+    border-radius: 8rpx;
+    overflow: hidden;
+}
+
+.video-cover-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.video-cover-image .bottom-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 8rpx;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+.video-cover-image .bottom-container .played-number {
+    font-size: 20rpx;
+    line-height: 44rpx;
+    color: #FFF;
+}
+
+.video-cover-image .bottom-container .played-number-icon {
+    width: 33rpx;
+    height: 29rpx;
+    float: left;
+    margin-top: 8rpx;
+    margin-right: 8rpx;
+}
+
+.video-cover-image .bottom-container .duration {
+    font-size: 20rpx;
+    line-height: 1;
+    color: #FFF;
+}
+
+.video-name {
+    display: block;
+    width: 100%;
+    margin-top: 8rpx;
+    padding: 0 8rpx;
+    font-size: 20rpx;
+    line-height: 1.1;
+    font-weight: bold;
+    color: #000;
+    word-break: break-all;
+}
