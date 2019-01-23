@@ -1,0 +1,24 @@
+<!--pages/follow/follow.wxml-->
+<view class="container">
+  <block wx:if="{{videoList.length}}">
+    <block wx:for="{{videoList}}" wx:key="id" wx:for-item="item">
+      <block wx:if="{{index == 0 || videoList[index-1].published_at != item.published_at}}">
+        <view class="item-header">{{item.published_at}}</view>
+      </block>
+
+      <component-video-item video="{{item}}" current-id="{{currentId}}" index="{{index}}"
+                            bind:play-video="playFollowedVideo"
+                            bind:collection-changed="collentionChanged"></component-video-item>
+    </block>
+    <block wx:if="{{publicMes == 'noMore'}}">
+      <component-no-more></component-no-more>
+    </block>
+  </block>
+  <block wx:elif="{{publicMes == 'empty'}}">
+    <component-empty-data>
+      <text class="no-data-mes">暂无关注</text>
+      <navigator class="add-follow" url="/pages/recommend/recommend">添加关注</navigator>
+    </component-empty-data>
+  </block>
+
+</view>

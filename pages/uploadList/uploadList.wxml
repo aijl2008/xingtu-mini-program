@@ -1,0 +1,17 @@
+<view class="upload-image-btn">
+    <image src="/images/video-upload-button-64.png" bindtap="jumpToUpload"></image>
+</view>
+<view class="upload-text-btn">
+    <text class="btn" bindtap="jumpToUpload">点击上传视频</text>
+</view>
+<view class="video-container">
+    <block wx:for="{{videoList}}" wx:key="id">
+        <component-my-video-item video="{{item}}" current-id="{{currentId}}" index="{{index}}"
+                              bind:play-video="playMyVideo"></component-my-video-item>
+    </block>
+    <view>
+        <block wx:if="{{publicMes == 'noMore'}}">
+            <component-no-more></component-no-more>
+        </block>
+    </view>
+</view>

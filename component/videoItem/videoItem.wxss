@@ -111,11 +111,23 @@
 }
 
 .video-item-container .bottom-message-container .message-container .icon{
-  width: 36rpx;
-  height: 36rpx;
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.icon{
+  width: 42rpx;
+  height: 42rpx;
 }
 
 .video-item-container .bottom-message-container .message-container .number{
+  margin-top: 16rpx;
+  color: #CCC;
+  font-size: 16rpx;
+  line-height: 1;
+}
+
+.number{
   margin-top: 16rpx;
   color: #CCC;
   font-size: 16rpx;

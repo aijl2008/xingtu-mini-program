@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "component-my-video-item": "/component/myVideoItem/myVideoItem",
+    "component-empty-data": "/component/emptyData/emptyData",
+    "component-no-more": "/component/noMore/noMore"
+  },
+  "navigationBarTitleText": "上传列表"
+}

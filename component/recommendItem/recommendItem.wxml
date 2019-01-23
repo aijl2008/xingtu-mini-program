@@ -16,11 +16,11 @@
         <view class="video-list-container">
             <block wx:for="{{[0,1,2]}}" :key="*this">
                 <block wx:if="{{recommend.video[item]}}">
-                    <image class="video-item" src="{{recommend.video[item].cover_url||'/images/video_cover_720_480.png'}}"
+                    <image class="video-item" src="{{recommend.video[item].cover_url}}"
                            bindtap="jumpVideoDetail" data-id="{{recommend.video[item].id}}"></image>
                 </block>
                 <block wx:else>
-                    <image class="video-item" src="/images/video_cover_720_480.png"></image>
+                    <image class="video-item" src="{{recommend.video[item].cover_url}}"></image>
                 </block>
 
             </block>

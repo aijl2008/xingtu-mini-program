@@ -6,7 +6,7 @@
             <image class="cover" mode="widthFix" src="{{video.cover_url}}" bindtap="startPlayer" data-id="{{video.id}}"></image>
         </block>
         <block wx:else>
-            <image class="cover" mode="widthFix" src="/images/video_cover_720_480.png" bindtap="startPlayer" data-id="{{video.id}}"></image>
+            <image class="cover" mode="widthFix" src="{{video.cover_url}}" bindtap="startPlayer" data-id="{{video.id}}"></image>
         </block>
     </block>
     <!--当前视频显示播放器-->

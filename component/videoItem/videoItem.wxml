@@ -7,7 +7,7 @@
                 <image data-index='{{index}}' bindtap="startPlayer" class="video-image" mode="widthFix" src="{{video.cover_url}}" data-id="{{video.id}}"></image>
             </block>
             <block wx:else>
-                <image data-index='{{index}}' bindtap="startPlayer" class="video-image" mode="widthFix" src="/images/video_cover_720_480.png" data-id="{{video.id}}"></image>
+                <image data-index='{{index}}' bindtap="startPlayer" class="video-image" mode="widthFix" src="{{video.cover_url}}" data-id="{{video.id}}"></image>
             </block>
         </block>
         <!--当前视频显示播放器-->
@@ -48,20 +48,24 @@
                 <image class="icon" src="/images/like.png"></image>
             </block>
 
-            <text class="number">{{video.formatted_liked_number}}</text>
+            <!-- <text class="number">{{video.formatted_liked_number}}</text> -->
         </view>
         <!--分享给好友-->
-        <button class="message-container" open-type="share" plain hover-class="none" hover-stop-propagation
+        <!-- <button class="message-container" open-type="share" plain hover-class="none" hover-stop-propagation
                 data-id="{{video.id}}" data-title="{{video.title}}" data-cover="{{video.cover_url}}">
             <image class="icon" src="/images/icon48_wx_logo.png"></image>
-            <text class="number">{{video.formatted_shared_wechat_number}}</text>
-        </button>
+        </button> -->
+        
+        <component-share-video 
+          share="{{video}}" 
+          button_class="icon">
+        </component-share-video>
         <!--分享到朋友圈-->
-        <button class="message-container" catchtap="saveVideoToAlbum" plain hover-class="none" hover-stop-propagation
+        <!-- <button class="message-container" catchtap="saveVideoToAlbum" plain hover-class="none" hover-stop-propagation
                 data-id="{{video.id}}">
             <image class="icon" src="/images/icon_res_download_moments.png"></image>
             <text class="number">{{video.formatted_shared_moment_number}}</text>
-        </button>
+        </button> -->
         <!--更多-->
         <button  catchtap="showMore" class="message-container" plain hover-class="none" hover-stop-propagation
                 data-id="{{video.id}}">

@@ -1,0 +1,52 @@
+/**index.wxss**/
+.header-seat-container{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-bottom: 16rpx;
+  overflow: hidden;
+  background: #FFF;
+  z-index: 999;
+  transform: translate3d(0,0,1000rpx);
+}
+
+
+.header-container{
+  width: 100%;
+  height: 66rpx;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+.header-container .nav-container{
+  width: 100%;
+  height: 66rpx;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  background: #FFF;
+}
+
+.header-container .nav-container .nav-item{
+  flex: none;
+  line-height: 0;
+  padding: 30rpx 12rpx;
+  margin: 0 12rpx;
+  font-size: 32rpx;
+  color: #CCC;
+  background: #FFF;
+}
+
+.header-container .nav-container .nav-item.active{
+  font-size: 36rpx;
+  color: #000;
+  border-bottom: 8rpx solid #000;
+}
+
+.video-container{
+  width: 100%;
+  margin-top: 90rpx;
+}

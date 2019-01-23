@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "component-member-item": "/component/memberItem/memberItem",
+    "component-empty-data": "/component/emptyData/emptyData",
+    "component-no-more": "/component/noMore/noMore",
+    "component-share-member": "/component/share/shareMember"
+  },
+  "navigationBarTitleText": "用户主页"
+}

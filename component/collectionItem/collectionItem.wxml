@@ -1,7 +1,7 @@
 <!--component/collectionItem/collectionItem.wxml-->
 <view class="collention-item-container" bindtap="goVideoDetail">
     <image class="video-cover-image" mode="widthFix"
-           src="{{loaded ? collection.cover_url||'/images/video_cover_720_480.png' : '/images/video_cover_720_480.png'}}">
+           src="{{collection.cover_url}}">
         <view class="bottom-container">
             <image class='played-number-icon' src='/images/th_eye.png'></image>
             <text class="played-number">{{collection.formatted_played_number}}</text>

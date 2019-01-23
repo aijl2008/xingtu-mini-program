@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/follow/follow",
+    "pages/user/user",
+    "pages/uploadVideo/uploadVideo",
+    "pages/uploadList/uploadList",
+    "pages/collection/collection",
+    "pages/detail/detail",
+    "pages/login/login",
+    "pages/user/record/record",
+    "pages/recommend/recommend",
+    "pages/user/edit/edit",
+    "pages/user/statistics",
+    "pages/member/member",
+    "pages/inform/inform"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/2-home.png",
+        "selectedIconPath": "/images/2-home.png"
+      },
+      {
+        "pagePath": "pages/follow/follow",
+        "text": "关注",
+        "iconPath": "/images/2-eye.png",
+        "selectedIconPath": "/images/2-eye.png"
+      },
+      {
+        "pagePath": "pages/uploadList/uploadList",
+        "text": "上传",
+        "iconPath": "/images/2-cinema.png",
+        "selectedIconPath": "/images/2-cinema.png"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收藏",
+        "iconPath": "/images/2-heart.png",
+        "selectedIconPath": "/images/2-heart.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/2-user.png",
+        "selectedIconPath": "/images/2-user.png"
+      }
+    ]
+  }
+}

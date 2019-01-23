@@ -1,0 +1,21 @@
+/* pages/uploadList/uploadList.wxss */
+.upload-image-btn{
+  width: 100%;
+  padding-top: 160rpx;
+  text-align: center
+}
+
+.upload-image-btn image {
+  width: 64px;
+  height: 64px;
+}
+
+.upload-text-btn {
+  text-align: center
+}
+
+.video-container{
+  width: 100%;
+  margin-top: 32rpx;
+  border-top: 1rpx solid #EDEDED;
+}

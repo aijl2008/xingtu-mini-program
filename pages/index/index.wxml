@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<!-- <block wx:for="{{navList}}" wx:key="status">
+<component-share-video share="{{item}}"></component-share-video>
+</block> -->
+<view class="container">
+    <view class="header-seat-container">
+        <view class="header-container">
+            <view class="nav-container">
+                <block wx:for="{{navList}}" wx:key="status">
+                    <text class="nav-item{{activeId == item.id ? ' active' : ''}}" bindtap="changeNav"
+                          data-id="{{item.id}}">{{item.name}}
+                    </text>
+                </block>
+            </view>
+        </view>
+    </view>
+
+    <view class="video-container">
+        <block wx:for="{{videoList}}" wx:key="id">
+            <component-video-item video="{{item}}" current-id="{{currentId}}" index="{{index}}"
+                                  bind:play-video="playHomeVideo"
+                                  bind:collection-changed="collentionChanged"
+                                  bind:follow-changed="followChanged"></component-video-item>
+        </block>
+    </view>
+</view>

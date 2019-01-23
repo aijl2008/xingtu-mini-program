@@ -1,0 +1,18 @@
+<!--pages/recommend/recommend.wxml-->
+<view class="container">
+    <block wx:if="{{recommendList.length}}">
+        <block wx:for="{{recommendList}}" wx:key="id" wx:for-item="item">
+            <component-recommend-item recommend="{{item}}"></component-recommend-item>
+        </block>
+        <view>
+            <block wx:if="{{publicMes == 'noMore'}}">
+                <component-no-more></component-no-more>
+            </block>
+        </view>
+    </block>
+    <block wx:elif="{{publicMes == 'empty'}}">
+        <component-empty-data>
+            <text class="no-data-msg">广场上一个人都没有</text>
+        </component-empty-data>
+    </block>
+</view>

@@ -1,0 +1,55 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="header-container">
+    <image class="bg-header" src="{{userInfo.avatar}}" mode="aspectFill"></image>
+    <view class="header">
+      <view class="user-top-container">
+        <navigator url="/pages/member/member?id={{userInfo.id}}"><image binderror="errImg" class="user-header" src="{{userInfo.avatar}}" mode="aspectFit"></image></navigator>
+        <view class="seat"></view>
+        <navigator class="edit-btn" url="/pages/user/edit/edit">编辑</navigator>
+        <component-share-member
+          share="{{userInfo}}" 
+          tip="分享我的主页"
+          className="button-style-b"
+        >
+        </component-share-member>
+        <!-- <text bindtap="saveMemberToAlbum" class="share-btn">分享我的主页</text> -->
+      </view>
+
+      <view class="username-container">{{userInfo.nickname}}</view>
+      <view class="follow-container">
+        <text class="follow-number">关注 {{userInfo.formatted_followed_number}}</text>
+        <text class="fans-number">粉丝 {{userInfo.formatted_be_followed_number}}</text>
+        <text class="fans-number">视频 {{userInfo.formatted_uploaded_number}}</text>
+        <text class="fans-number">播放 {{userInfo.formatted_played_number}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <!--<view class="content-item-container">
+      <text class="item-name">获取个人页面路径</text>
+    </view>
+ -->
+    <view class="content-item-container" catchtap='copyUrl'>
+      <image class="item-icon" src="/images/map.png"></image>
+      <text class="item-name">获取电脑版地址</text>
+    </view>
+    <navigator class="content-item-container" url="/pages/user/statistics">
+      <image class="item-icon" src="/images/line-chart.png"></image>
+      <text class="item-name">统计数据</text>
+    </navigator>
+    <navigator class="content-item-container" url="/pages/user/record/record">
+      <image class="item-icon" src="/images/timer_2.png"></image>
+      <text class="item-name">浏览记录</text>
+    </navigator>
+    <view class="content-item-container">
+      <image class="item-icon" src="/images/chat.png"></image>
+      <text class="item-name">联系我们</text>
+      <button class="contact-btn" open-type="contact"></button>
+    </view>
+    <!--<view class="content-item-container">
+      <text class="item-name">分享的视频带有我的其他视频</text>
+    </view>-->
+  </view>
+</view>

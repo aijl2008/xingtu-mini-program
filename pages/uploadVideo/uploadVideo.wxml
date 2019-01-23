@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="form-item-container">
+    <input class="file_name" placeholder="在上传视频之前，输入视频名称" auto-focus type="text" bindinput="inputChange"/>
+  </view>
+
+  <view class="form-item-container">
+    <picker bindchange="bindPickerChangeClassifications" value="{{classification}}" range="{{classificationsShow}}" value='0'>
+      <view class="form-header">请选择分类</view>
+      <view class="picker">当前选择：{{classifications[classification].name}}</view>
+    </picker>
+  </view>
+
+  <view class="form-item-container">
+    <picker bindchange="bindPickerChangeVisibilities" value="{{visibility}}" range="{{visibilitiesShow}}" value='0'>
+      <view class="form-header">请选择权限</view>
+      <view class="picker">当前选择：{{visibilities[visibility].name}}</view>
+    </picker>
+  </view>
+
+  <view class="upload">
+    <button class="file_upload" bindtap="chooseFile">上传视频</button>
+  </view>
+</view>
+
+

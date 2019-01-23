@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "component-video-item": "/component/videoItem/videoItem",
+    "component-empty-data": "/component/emptyData/emptyData",
+    "component-no-more": "/component/noMore/noMore"
+  },
+  "navigationBarTitleText": "我的关注"
+}

@@ -1,0 +1,132 @@
+/* pages/user/user.wxss */
+.container .header-container{
+  position: relative;
+  width: 100%;
+}
+
+.header{
+  width: 100%;
+  height: 450rpx;
+  padding-top: 160rpx;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0,0,0,0.4);
+}
+
+.container .header-container .bg-header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: translate3d(0 ,0, -1rpx);
+  width: 100%;
+  height: 450rpx;
+}
+
+.container .header-container .user-top-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 32rpx;
+
+}
+.container .header-container .user-top-container .user-header{
+  width: 128rpx;
+  height: 128rpx;
+  border: 4rpx solid #FFF;
+  border-radius: 50%;
+}
+
+.container .header-container .user-top-container .seat{
+  flex: 1;
+}
+
+.container .header-container .user-top-container .edit-btn{
+  font-size: 20rpx;
+  line-height: 0;
+  padding: 24rpx 12rpx;
+  background: #FFF;
+  border-radius: 8rpx;
+}
+
+.container .header-container .user-top-container .share-btn{
+  font-size: 20rpx;
+  color: #FFF;
+  line-height: 0;
+  padding: 24rpx 12rpx;
+  margin-left: 24rpx;
+  background: #00AA00;
+  border-radius: 8rpx;
+}
+
+.container .header-container .username-container{
+  margin: 12rpx 0 0 32rpx;
+  text-align: left;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 1;
+  color: #FFF;
+}
+
+.container .header-container .follow-container{
+  width: 100%;
+  padding: 0 32rpx;
+  margin-top: 32rpx;
+  display: flex;
+  align-items: center;
+}
+
+.container .header-container .follow-container .follow-number,
+.container .header-container .follow-container .fans-number{
+  font-size: 24rpx;
+  color: #FFF;
+  line-height: 1;
+  margin-right: 32rpx;
+}
+
+.content{
+  width: 100%;
+  padding-left: 32rpx;
+}
+
+.content .content-item-container{
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  padding-right: 32rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #EEE;
+}
+
+.item-icon{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 8rpx;
+}
+
+.content .content-item-container .item-name{
+  font-size: 24rpx;
+  line-height: 1;
+  flex: 1;
+}
+
+.content .content-item-container .contact-btn{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.content .content-item-container:after{
+  content: '';
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  border-left: 1rpx solid #DDD;
+  border-top: 1rpx solid #DDD;
+  transform-origin: center center;
+  transform: rotate(135deg);
+}

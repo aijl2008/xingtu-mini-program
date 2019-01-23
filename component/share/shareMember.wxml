@@ -1,0 +1,18 @@
+<!--component/share/share.wxml-->
+<view>
+  <view class="{{className}}" bindtap='showShareSelectDialog'>{{tip}}</view>
+</view>
+<view class="mask" bindtap="hideShareSelectDialog" catchtouchmove="preventTouchMove" wx:if="{{show}}"></view>
+<view class="share-dialog" wx:if="{{show}}">
+    <!--分享给好友-->
+    <button style='border:none' class="share-container" open-type="share" plain hover-class="none" hover-stop-propagation
+            data-id="{{share.id||0}}" data-title="{{share.nicknam}}的主页">
+        <image class="icon" src="/images/icon48_wx_logo.png"></image>
+        <text class="number">分享给好友</text>
+    </button>
+    <!--分享到朋友圈-->
+    <button style='border:none' class="share-container" bindtap="shareToMoment" plain hover-class="none" data-id="{{share.id||0}}">
+        <image class="icon" src="/images/icon_res_download_moments.png"></image>
+        <text class="number">分享到朋友圈</text>
+    </button>
+</view>

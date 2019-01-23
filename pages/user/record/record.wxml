@@ -1,0 +1,29 @@
+<!--pages/user/record/record.wxml-->
+<view>
+    <view class="container">
+        <block wx:if="{{historyList.length}}">
+            <view class="collection-left-container">
+                <block wx:for="{{historyList}}" wx:key="id" wx:for-item="item">
+                    <block wx:if="{{index%2 == 0}}">
+                        <component-collection-item collection="{{item}}"></component-collection-item>
+                    </block>
+                </block>
+            </view>
+            <view class="collection-right-container">
+                <block wx:for="{{historyList}}" wx:key="id" wx:for-item="item">
+                    <block wx:if="{{index%2 == 1}}">
+                        <component-collection-item collection="{{item}}"></component-collection-item>
+                    </block>
+                </block>
+            </view>
+        </block>
+        <block wx:elif="{{publicMes == 'empty'}}">
+            <component-empty-data>
+                <text class="no-data-msg">暂无浏览记录</text>
+            </component-empty-data>
+        </block>
+    </view>
+    <block wx:if="{{publicMes == 'noMore'}}">
+        <component-no-more></component-no-more>
+    </block>
+</view>

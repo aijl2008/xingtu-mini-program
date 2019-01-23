@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "component-share-video": "/component/share/shareVideo"
+  }
 }

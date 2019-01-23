@@ -1,0 +1,70 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+    <video src="{{videoDetail.url}}" poster="{{videoDetail.cover_url}}" class="video"></video>
+
+    <view class="video-msg-container">
+        <text class="video-title">{{videoDetail.title}}</text>
+        <text class="total-looked-number">{{videoDetail.formatted_played_number}}次观看,发布于{{videoDetail.humans_published_at}}</text>
+        <view class="share-msg-container">
+            <!--收藏-->
+            <view class="item-container" bindtap="changeCollection">
+                <block wx:if="{{videoDetail.liked}}">
+                    <image class="icon" src="/images/liked.png"></image>
+                </block>
+                <block wx:else>
+                    <image class="icon" src="/images/like.png"></image>
+                </block>
+            </view>
+            <component-share-video share="{{videoDetail}}"></component-share-video>
+
+            <navigator class="more-video" url="/pages/recommend/recommend">查看更多视频</navigator>
+            <text class="go-home" bindtap='goHome'>回到首页</text>
+
+            <!--分享到好友-->
+            <!-- <button class="item-container" open-type="share" plain hover-class="none" hover-stop-propagation>
+                <image class="icon" src="/images/icon48_wx_logo.png"></image>
+                <text class="number">{{videoDetail.formatted_shared_wechat_number}}</text>
+            </button> -->
+
+            <!--分享到朋友圈-->
+            <!-- <button class="item-container" catchtap="saveVideoToAlbum" plain hover-class="none" hover-stop-propagation data-id="{{videoDetail.id}}">
+                <image class="icon" src="/images/icon_res_download_moments.png"></image>
+                <text class="number">{{videoDetail.formatted_shared_moment_number}}</text>
+            </button> -->
+            <!--更多-->
+            <button catchtap="showMore" class="item-container" plain hover-class="none" hover-stop-propagation
+                    data-id="{{videoDetail.id}}">
+                <image class="icon" src="/images/more.png"></image>
+            </button>
+        </view>
+    </view>
+
+    <view class="user-msg-container">
+        <image class="user-header" src="{{videoDetail.wechat.avatar}}"></image>
+        <text class="user-name">{{videoDetail.wechat.nickname}}</text>
+        <block wx:if="{{videoDetail.wechat.followed}}">
+            <text class="cancel-follow" bindtap="changeFollow">已关注</text>
+        </block>
+        <block wx:else>
+            <text class="follow" bindtap="changeFollow">+ 关注</text>
+        </block>
+    </view>
+
+    <!--相关视频-->
+    <view class="video-list-container">
+        <view class="collection-left-container">
+            <block wx:for="{{videoList}}" wx:key="id" wx:for-item="item">
+                <block wx:if="{{index%2 == 0}}">
+                    <component-member-item member="{{item}}"></component-member-item>
+                </block>
+            </block>
+        </view>
+        <view class="collection-right-container">
+            <block wx:for="{{videoList}}" wx:key="id" wx:for-item="item">
+                <block wx:if="{{index%2 == 1}}">
+                    <component-member-item member="{{item}}"></component-member-item>
+                </block>
+            </block>
+        </view>
+    </view>
+</view>

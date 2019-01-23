@@ -1,0 +1,85 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.2",
+	"appid": "wxbe20d80072eaf2d3",
+	"projectname": "xiangtu",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "uploadList",
+					"pathName": "pages/uploadList/uploadList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "follow",
+					"pathName": "pages/follow/follow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "collection",
+					"pathName": "pages/collection/collection",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "detail",
+					"pathName": "pages/detail/detail",
+					"query": "id=1"
+				},
+				{
+					"id": -1,
+					"name": "recommend",
+					"pathName": "pages/recommend/recommend",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "uploadVideo",
+					"pathName": "pages/uploadVideo/uploadVideo"
+				}
+			]
+		}
+	}
+}

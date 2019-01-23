@@ -1,0 +1,9 @@
+<!--pages/user/edit/edit.wxml-->
+<view class="container">
+  <view class="edit-header" bindtap="editHeader">
+    <image binderror="errImg" class="old-header" src="{{userInfo.avatar}}"></image>
+  </view>
+  <view class="edit-name">
+    <input class="edit-name-input" type="text" bindinput="editName" value="{{userInfo.nickname}}" />
+  </view>
+</view>

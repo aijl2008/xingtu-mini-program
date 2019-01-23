@@ -1,0 +1,93 @@
+<!--pages/member/member.wxml-->
+<view class="member-container">
+    <view class="member-msg-container">
+        <image class="member-header" src="{{user.avatar||'/images/user-64.png'}}"></image>
+        <view class="member-detail-container">
+            <text class="member-nick-name">{{user.nickname}}</text>
+            <view class="th_share_box">
+                <component-share-member
+                  share="{{user}}" 
+                  tip="分享TA"
+                  className="button-style-a"
+                  >
+                </component-share-member>
+                <!-- <view data-id='{{user.id}}' class="member-share-btn" bindtap="shareUser">分享TA</view> -->
+                <!--关注与取消关注-->
+                <block wx:if="{{!user.onself}}">
+                    <block wx:if="{{!user.followed}}">
+                        <view data-id='{{user.id}}' class="follow-btn" bindtap="followUser">+关注</view>
+                    </block>
+                    <block wx:else>
+                        <view data-id='{{user.id}}' class="unfollow-btn" bindtap="cancelFollowUser">取消关注</view>
+                    </block>
+                </block>
+            </view>
+        </view>
+        <view class="mask" bindtap="cancelShareUser" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+        <view class="modalDlg" wx:if="{{showModal}}">
+            <!--分享给好友-->
+            <button style='border:none' class="message-container" open-type="share" plain hover-class="none" hover-stop-propagation
+                    data-id="{{video.id}}" data-title="{{video.title}}" data-cover="{{video.cover_url}}">
+                <image class="icon" src="/images/icon48_wx_logo.png"></image>
+                <text class="number">分享给好友</text>
+            </button>
+            <!--分享到朋友圈-->
+            <button style='border:none' class="message-container" catchtap="saveMemberToAlbum" plain hover-class="none" hover-stop-propagation
+                    data-id="{{user.id}}">
+                <image class="icon" src="/images/icon_res_download_moments.png"></image>
+                <text class="number">分享到朋友圈</text>
+            </button>
+        </view>
+
+    </view>
+    <view class="header">
+        <view class="em-follow-container">
+            <view class="follow-number">
+                <text class='th_fontw'> {{user.formatted_followed_number}}</text>
+                <text>关注</text>
+            </view>
+            <view class="fans-number">
+                <text class='th_fontw'>{{user.formatted_be_followed_number}}</text>
+                <text> 粉丝</text>
+            </view>
+            <view class="fans-number">
+                <text class='th_fontw'> {{user.formatted_uploaded_number}}</text>
+                <text> 视频</text>
+            </view>
+            <view class="fans-number">
+                <text class='th_fontw'> {{user.formatted_played_number}}</text>
+                <text> 播放</text>
+            </view>
+        </view>
+    </view>
+
+
+    <!--视频列表-->
+
+    <view class="video-list-container">
+        <view class="collection-left-container">
+            <block wx:for="{{user.video.data}}" wx:key="id" wx:for-item="item">
+                <block wx:if="{{index%2 == 0}}">
+                    <component-member-item member="{{item}}"></component-member-item>
+                </block>
+            </block>
+        </view>
+        <view class="collection-right-container">
+            <block wx:for="{{user.video.data}}" wx:key="id" wx:for-item="item">
+                <block wx:if="{{index%2 == 1}}">
+                    <component-member-item member="{{item}}"></component-member-item>
+                </block>
+            </block>
+        </view>
+    </view>
+    <block wx:if="{{publicMes == 'noMore'}}">
+        <component-no-more></component-no-more>
+    </block>
+
+    <block wx:elif="{{!user.video.data.length}}">
+        <component-empty-data>
+            <text class="no-data-msg">没有上传视频</text>
+        </component-empty-data>
+    </block>
+</view>

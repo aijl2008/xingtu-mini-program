@@ -1,0 +1,18 @@
+/* pages/collection/collection.wxss */
+.container {
+    width: 100%;
+    padding: 0 32rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collection-left-container,
+.collection-right-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-data-mes {
+    font-size: 32rpx;
+    line-height: 1;
+}

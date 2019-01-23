@@ -73,9 +73,11 @@ Component({
         },
 
         goVideoDetail() {
-            const {id} = this.data.video;
+          
+          let url = "/pages/detail/detail?id=" + this.data.video.id;
+          console.log(this.data.video.id, url);
             wx.navigateTo({
-                url: `/pages/detail/detail?id=${id}`,
+              url: url
             })
         },
 
