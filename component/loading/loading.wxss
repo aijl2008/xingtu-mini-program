@@ -1,0 +1,15 @@
+/* component/loading/loading.wxss */
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24rpx;
+}
+.loading-msg{
+  display: block;
+  font-size: 24rpx;
+  color: #CCC;
+  line-height: 0;
+  padding: 24rpx 0;
+  text-align: center;
+}

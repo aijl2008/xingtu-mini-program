@@ -12,7 +12,7 @@ Page({
         currentPage: 0,
         lastPage: 0,
         currentId: 0,
-        publicMes: '',
+      publicMes: "loading",
     },
 
     /**
@@ -65,7 +65,7 @@ Page({
             videoList: [],
             currentId: 0,
             currentPage: 0,
-            lastPage: 0,
+          lastPage: 0, publicMes: "loading",
         }, () => {
             this.getFollowVideoList();
         })
@@ -111,7 +111,7 @@ Page({
                         this.setData({
                             videoList: videoList.concat(res.data.data),
                             lastPage: res.data.last_page,
-                            currentPage,
+                          currentPage, publicMes: "",
                         })
                     } else {
                         this.setData({

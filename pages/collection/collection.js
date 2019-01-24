@@ -11,7 +11,7 @@ Page({
         collectionList: [],
         currentPage: 0,
         lastPage: 0,
-        publicMes: '',
+        publicMes: "loading",
     },
 
     /**
@@ -34,8 +34,7 @@ Page({
       this.setData({
         collectionList: [],
         currentPage: 0,
-        lastPage: 0,
-        publicMes: ''
+        lastPage: 0
       }, () => {
         this.getCollectionList();
       });
@@ -62,7 +61,7 @@ Page({
         this.setData({
             currentPage: 0,
             collectionList: [],
-            publicMes: '',
+          publicMes: "loading",
         }, () => {
             this.getCollectionList();
         })
@@ -108,6 +107,7 @@ Page({
                             collectionList: collectionList.concat(res.data.data),
                             lastPage: res.data.last_page,
                             currentPage,
+                            publicMes: "",
                         });
                     } else {
                         this.setData({

@@ -3,6 +3,7 @@
     "component-video-item": "/component/videoItem/videoItem",
     "component-empty-data": "/component/emptyData/emptyData",
     "component-no-more": "/component/noMore/noMore",
+    "component-loading": "/component/loading/loading",
     "component-share-video": "/component/share/shareVideo"
   },
   "navigationBarTitleText": "首页"

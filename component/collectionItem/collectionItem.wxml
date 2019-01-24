@@ -3,8 +3,8 @@
     <image class="video-cover-image" mode="widthFix"
            src="{{collection.cover_url}}">
         <view class="bottom-container">
-            <image class='played-number-icon' src='/images/th_eye.png'></image>
-            <text class="played-number">{{collection.formatted_played_number}}</text>
+            <!-- <image class='played-number-icon' src='/images/th_eye.png'></image> -->
+            <text class="played-number">{{collection.formatted_played_number}}次播放</text>
             <text class="duration">{{member.formatted_duration}}</text>
         </view>
     </image>

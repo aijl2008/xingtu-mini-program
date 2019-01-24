@@ -12,6 +12,7 @@ Page({
         currentId: 0,
         currentPage: 0,
         lastPage: 0,
+        publicMes: "loading",
     },
 
     /**
@@ -23,7 +24,8 @@ Page({
             videoList: [],
             currentId: 0,
             currentPage: 0,
-            lastPage: 0,
+            lastPage: 0, 
+            publicMes: "loading",
         }, () => {
             this.getVideoList();
         })
@@ -128,6 +130,7 @@ Page({
                             videoList: videoList.concat(res.data.data),
                             lastPage: res.data.last_page,
                             currentPage,
+                            publicMes: "",
                         })
                     }
                 }

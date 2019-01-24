@@ -4,10 +4,10 @@
         <!--非当前视频显示封面-->
         <block wx:if="{{currentId != video.id}}">
             <block wx:if="{{loaded}}">
-                <image data-index='{{index}}' bindtap="startPlayer" class="video-image" mode="widthFix" src="{{video.cover_url}}" data-id="{{video.id}}"></image>
+                <image data-index='{{index}}' bindtap="startPlayer" class="video-image" mode="aspectFill" src="{{video.cover_url}}" data-id="{{video.id}}"></image>
             </block>
             <block wx:else>
-                <image data-index='{{index}}' bindtap="startPlayer" class="video-image" mode="widthFix" src="{{video.cover_url}}" data-id="{{video.id}}"></image>
+                <image data-index='{{index}}' bindtap="startPlayer" class="video-image" mode="aspectFill" src="{{video.cover_url}}" data-id="{{video.id}}"></image>
             </block>
         </block>
         <!--当前视频显示播放器-->

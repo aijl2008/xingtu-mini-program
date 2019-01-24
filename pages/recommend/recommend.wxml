@@ -16,3 +16,6 @@
         </component-empty-data>
     </block>
 </view>
+  <block wx:if="{{publicMes == 'loading'}}">
+  <component-loading></component-loading>
+  </block>

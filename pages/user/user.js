@@ -26,7 +26,7 @@ Page({
         success: function (res) {
           wx.showModal({
             title: '网址已复制',
-            content: url,
+            content: "可以登录电脑上传视频:"+url,
             showCancel: false,
             success: function (res) {
               if (res.confirm) {

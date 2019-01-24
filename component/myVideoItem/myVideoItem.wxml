@@ -3,10 +3,10 @@
     <!--非当前视频显示封面-->
     <block wx:if="{{currentId != video.id}}">
         <block wx:if="{{loaded}}">
-            <image class="cover" mode="widthFix" src="{{video.cover_url}}" bindtap="startPlayer" data-id="{{video.id}}"></image>
+            <image class="cover" mode="aspectFill" src="{{video.cover_url}}" bindtap="startPlayer" data-id="{{video.id}}"></image>
         </block>
         <block wx:else>
-            <image class="cover" mode="widthFix" src="{{video.cover_url}}" bindtap="startPlayer" data-id="{{video.id}}"></image>
+            <image class="cover" mode="aspectFill" src="{{video.cover_url}}" bindtap="startPlayer" data-id="{{video.id}}"></image>
         </block>
     </block>
     <!--当前视频显示播放器-->
@@ -16,8 +16,7 @@
     <text class="my-video-title">{{video.title}}</text>
     <block wx:if="{{video.status == 1}}">
         <view class="bottom-container">
-            <image class='played-number-icon' src='/images/th_eye.png'></image>
-            <text class="played-number">{{video.formatted_played_number}}</text>
+            <text class="played-number">{{video.formatted_played_number}}次播放,{{video.status_msg}}</text>
             <text class="duration">{{video.formatted_duration}}</text>
         </view>
     </block>

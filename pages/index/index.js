@@ -13,7 +13,8 @@ Page({
         activeId: 0,
         currentId: 0,
         currentPage: 0,
-        lastPage: 0
+        lastPage: 0,
+        publicMes: 'loading'
     },
 
     onLoad(options) {
@@ -26,6 +27,7 @@ Page({
             currentId: 0,
             currentPage: 0,
             lastPage: 0,
+          publicMes:"loading"
         }, () => {
             this.getVideoList();
         })
@@ -75,7 +77,7 @@ Page({
                     if (res.data.length) {
                         this.setData({
                             navList: res.data,
-                            activeId: res.data[0].id,
+                            activeId: res.data[0].id
                         }, () => {
                             this.getVideoList();
                         });
@@ -93,6 +95,7 @@ Page({
         util.ajaxCommon(API.URL_GET_VIDEOS, {
             classification: activeId,
             page: currentPage,
+          loading: false
         }, {
             success: (res) => {
                 if (res.code == API.SUCCESS_CODE) {
@@ -100,7 +103,7 @@ Page({
                         this.setData({
                             videoList: videoList.concat(res.data.data),
                             lastPage: res.data.last_page,
-                            currentPage,
+                          currentPage, publicMes: "",
                         })
                     }
                 }
@@ -117,8 +120,9 @@ Page({
             currentId: 0,
             currentPage: 0,
             lastPage: 0,
+          publicMes: "loading",
         }, () => {
-            this.getVideoList();
+          this.getVideoList();
         });
     },
 

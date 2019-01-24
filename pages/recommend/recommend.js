@@ -11,7 +11,7 @@ Page({
         recommendList: [],
         currentPage: 0,
         lastPage: 0,
-        publicMes: ''
+      publicMes: "loading",
     },
 
     /**
@@ -56,7 +56,7 @@ Page({
         this.setData({
             videoList: [],
             currentPage: 0,
-            lastPage: 0,
+          lastPage: 0, publicMes: "loading",
         }, () => {
             this.getRecommendList();
         })
@@ -100,7 +100,7 @@ Page({
                         this.setData({
                             recommendList: recommendList.concat(res.data.data),
                             lastPage: res.data.last_page,
-                            currentPage,
+                          currentPage, publicMes: "",
                         })
                     } else {
                         this.setData({

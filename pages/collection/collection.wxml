@@ -27,3 +27,6 @@
         <text class="no-data-mes">暂无收藏</text>
     </component-empty-data>
 </block>
+<block wx:if="{{publicMes == 'loading'}}">
+  <component-loading></component-loading>
+</block>

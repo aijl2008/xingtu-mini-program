@@ -46,12 +46,12 @@ const ajaxCommon = function (url, data, {method = "GET", loading = true, needTok
         }
     }
     if (loading) {
-        wx.showToast({
-            mask: true,
-            title: "网络请求中",
-            icon: "loading",
-            duration: 10000
-        });
+        // wx.showToast({
+        //     mask: true,
+        //     title: "网络请求中",
+        //     icon: "loading",
+        //     duration: 10000
+        // });
     }
     let finalData = {};
     let token = wx.getStorageSync('token');
